@@ -1,0 +1,7 @@
+# .gitignore
+venv/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
