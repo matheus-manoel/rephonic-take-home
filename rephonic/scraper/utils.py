@@ -32,9 +32,6 @@ def fetch_reviews(session, csrf_token, podcast_id):
         'x-requested-with': 'XMLHttpRequest'
     }
     response = session.post(url, headers=headers, data=payload)
-    print("Status Code:", response.status_code)
-    print("Response Text:", response.text)
-    print(BeautifulSoup(response.text, 'html.parser'))
     return BeautifulSoup(response.text, 'html.parser') if response.status_code == 200 else None
 
 
